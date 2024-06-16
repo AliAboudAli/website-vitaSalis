@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    position: relative;
+    height: 550px; 
+    background-image: url('img/main_image.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 50px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    display: block;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+#vision {
+    background: linear-gradient(to bottom, orange, red);
+    padding: 50px 0;
+    color: white;
+}
+
+#vision h1 {
+    margin-top: 0;
+}
+
+#vision img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#appointment {
+    background: red;
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+}
+
+#appointment h2 {
+    margin-top: 0;
+}
+
+#appointment form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#appointment label {
+    margin-top: 10px;
+}
+
+#appointment input {
+    margin: 5px 0;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+}
+
+#appointment button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    background: red;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.service {
+    flex: 1 1 calc(33.333% - 40px); 
+    margin: 10px;
+    padding: 10px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    text-align: left;
+    box-sizing: border-box; 
+}
+
+.button {
+    .btn {
+        border: none; /* Remove borders */
+        color: rgb(0, 0, 0); /* Add a text color */
+        padding: 14px 28px; /* Add some padding */
+        cursor: pointer; /* Add a pointer cursor on mouse-over */
+        .default {background-color: #e7e7e7; color: rgb(0, 0, 0);} /* Gray */
+        .default:hover {background: #ddd;}
+      }
+}
+
+
+@media (max-width: 768px) {
+    .service {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .service {
+        flex: 1 1 100%; 
+    }
+}

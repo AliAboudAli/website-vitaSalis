@@ -1,15 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Vitasalis Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <h1>Vitasalis</h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaSalis</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#psychotherapie">Afdelingen</a></li>
+                <li><a href="#overig">Overig</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="vision">
+            <h1>Onze Visie</h1>
+            <h2>De plek waar je op de voorgrond staat en waar je intensief in hoe je behandeld wordt!</h2>
+            <p>‘Een vast adres waar je terecht kan met een hulpvraag’
+                Dat is de insteek van Vita Salis Gezondheidscentrum. Momenteel kunt u bij ons terecht voor Fysiotherapie, Counseling en Diëtiek. In de toekomst kunt u meer verwachten van ons. Loopt u zelf met een hulpvraag waar in de omgeving geen gehoor aan gegeven kan worden horen wij het graag van u. Wellicht is dat de volgende aanvulling in ons gezondheidscentrum…
+                Vita Salis Gezondheidscentrum:De plek waar u op de voorgrond staat en waar u meebepaald hoe u behandeld wordt.</p>
+        </section>
+        <section id="appointment">
+            <h2>Afspraak</h2>
+            <form id="appointmentForm">
+                <label for="name">Naam</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <label for="phone">Telefoonnummer</label>
+                <input type="tel" id="phone" name="phone">
+                <label for="date">Datum die U uit komt</label>
+                <input type="date" id="date" name="date">
+                <button type="submit">Afspraak Verzoeken</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="services">
+            <div class="service">
+                <h3>Zorgboederij</h3>
+                <p>Vita Salis werkt samen met Zorgboerderij Vrij en Blij
+                    Op zoek naar een plek waar uw kind meer zorg en aandacht krijgt in Nieuwe Pekela?In samenwerking met 
+                    Zorgboerderij Vrij en Blij helpen wij graag kinderen die wat extra aandacht nodig hebben.</p>
+                    <button class="btn default">Default</button>
+            </div>
+            <div class="service">
+                <h3>Fysiotherapie</h3>
+                <p>Vita Salis Fysiotherapie in Nieuwe Pekela is het vetrouwde adres voor al uw lichamelijke ongemakken. 
+                    Onze ervaren therapeuten nemen de tijd voor u en uw klachten en helpen u voorwaarts dankzij een echt perssonlijke aanpak. 
+                    U mag namelijk zelf meebepalen hoe u geholpen wilt worden. Bij Vita Salis staan u en uw gezondheid altijd voorop.</p>
+                    <button class="btn default">Default</button>
+            </div>
+            <div class="service">
+                <h3>Podotherapie</h3>
+                <p>In Vita Salis gezondheidscentrum
+                    Iedereen moet kunnen bewegen, zo lang en zo mobiel mogelijk. Onze podotherapeuten staan klaar voor jong en oud, 
+                    sporters en voor mensen met gezondheids- klachten. 
+                    Kortom voor iedereen die zo lang mogelijk zonder pijn mobiel wil zijn met een sterk gezond bewegingsapparaat.
+                    <button class="btn default">Default</button>
+                </p>
+            </div>
+            <div class="service">
+                <h3>Logopedie</h3>
+                <p>Vita Salis werkt samen met Buurtzorg Nieuwe Pekela om de juiste zorg op het juiste moment te bieden
+                    Buurtzorg is een thuiszorgorganisatie die met kleine teams, bestaande uit (wijk)verpleegkundigen en (wijk)ziekenverzorgenden, 
+                    zorg levert aan huis. Het gaat hierbij om verpleging en persoonlijke verzorging
+                    <button class="btn default">Default</button>
+                </p>
+            </div>
+            <div class="service">
+                <h3>Dietiek</h3>
+                <p>
+                    Diëtist van Meander in Vita Salis gezondheidscentrum
+                    U kunt bij ons terecht voor alle voedingskundige vragen en problemen, al dan niet in combinatie met een of meerdere ziekten.
+                    U vertelt ons waar u begeleiding in wilt hebben en/of wat de klachten zijn en 
+                    wij kijken samen met u naar een passende oplossing.
+                    <button class="btn default">Default</button>
+                </p>
+            </div>
+            <div class="service">
+                <h3>Logopedie</h3>
+                <p>Oetara logopedie in Vita Salis gezondheidscentrum
+                    Ons team verzorgt logopedische behandelingen op maat voor kinderen, volwassenen en ouderen.
+                    Onze praktijk is kwaliteit gecertificeerd en aangesloten bij de branchevereniging NVLF en bieden u kwaliteit en continuïteit.
+                    <button class="btn default">Default</button>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+            var isValid = true;
+            var fields = ['naam', 'email', 'telephone Nummer', 'datum'];
 
+            fields.forEach(function(field) {
+                var input = document.getElementById(field);
+                if (!input.value) {
+                    isValid = false;
+                    input.style.border = '2px solid red'; 
+                } else {
+                    input.style.border = ''; 
+                }
+            });
+
+            if (!isValid) {
+                event.preventDefault(); 
+                alert('alst u blieft alles invullen');
+            }
+        });
+    </script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
+
+
